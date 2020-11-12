@@ -1,8 +1,30 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block style.css %}
+    <link href="{% static 'top.style.css' %}" rel="stylesheet">
+{% endblock style.css %}
+
 {% block contents %}
 
     <h1>まいけむ</h1>
+<div class="card--contents">
+    <div class="card--wrapper">
+        {% for blog in object_list %}
+        <ul class="card mb-3 container card--wrapper_list">
+            <li class="card-body">
+                <h2 class="card-title">{{ blog.title }}</h2>
+                <p class="card-text">{{ blog.text }}</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <div class="card--tags">
+                    <h3>
+                        <span class="badge badge-primary">New</span>
+                    </h3>
+                </div>
+            </li>
+        </ul>
+        {% endfor %}
+    </div>
+</div>
 
 {% endblock contents %}
