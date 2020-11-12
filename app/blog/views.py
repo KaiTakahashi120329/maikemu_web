@@ -1,7 +1,7 @@
-from django.shortcuts import render
-from django.views.generic import ListView
+from django.shortcuts import render, get_object_or_404
 from .models import BaseModel
 
-class BlogListView(ListView):
-    template_name = 'top.html'
-    model = BaseModel
+
+def BlogFunc(request):
+    object_list = BaseModel.objects.all()
+    return render(request, 'top.html',  {'object_list':object_list})
