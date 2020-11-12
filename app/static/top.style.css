@@ -1,0 +1,16 @@
+.card--wrapper {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+}
+
+.card--wrapper_list {
+    position: relative;
+    width: 40%;
+}
+
+.card--tags {
+    position: absolute;
+    top: 1rem;
+    right: 30px;
+}
