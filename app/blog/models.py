@@ -8,6 +8,7 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
+# 投稿機能のモデル
 class BaseModel(models.Model):
     title = models.CharField(max_length=50)
     text = models.TextField()
