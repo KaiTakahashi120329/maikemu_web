@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 
+
 # カテゴリーモデル
 class Category(models.Model):
     name = models.CharField('カテゴリー', max_length=50)
