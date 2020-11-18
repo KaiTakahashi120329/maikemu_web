@@ -9,6 +9,5 @@ def CategoryFunc(request, category):
     return render(request, 'top.html', { 'category': category, 'blogCategory': blogCategory})
 
 def BlogFunc(request):
-    object_list = BaseModel.objects.all()
     publish_list = BaseModel.objects.published()
-    return render(request, 'top.html',  {'object_list':object_list, 'publish_list':publish_list})
+    return render(request, 'top.html',  {'publish_list':publish_list})
