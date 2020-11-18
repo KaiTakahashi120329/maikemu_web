@@ -10,15 +10,13 @@
     <h1>まいけむ</h1>
 <div class="card--contents">
     <div class="card--wrapper">
-        {% for blog in object_list %}
+        {% for publish in publish_list %}
         <ul class="card mb-3 container card--wrapper_list">
-
-
             <li class="card-body">
-                <h2 class="card-title">{{ blog.title }}</h2>
-                <h4>カテゴリー：{{ blog.category }}</h3>
-                <p class="card-text">{{ blog.text }}</p>
-                <p class="card-text"><small class="text-muted">作成日: {{ blog.created_at|date:"Y年m月d日(D)" }}</small></p>
+                <h2 class="card-title">{{ publish.title }}</h2>
+                <h4>カテゴリー：{{ publish.category }}</h3>
+                <p class="card-text">{{ publish.text }}</p>
+                <p class="card-text"><small class="text-muted">作成日: {{ publish.created_at|date:"Y年m月d日(D)" }}</small></p>
                 <div class="card--tags">
                     <h3>
                         <span class="badge badge-primary">New</span>
