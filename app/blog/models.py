@@ -17,6 +17,7 @@ class DiaryQuerySet(models.QuerySet):
 # 投稿機能のモデル
 class BaseModel(models.Model):
     title = models.CharField(max_length=50)
+    description = models.CharField(max_length=25, null=True)
     text = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
