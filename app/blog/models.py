@@ -9,6 +9,10 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
+    class Meta:
+        verbose_name = 'カテゴリー'
+        verbose_name_plural = 'カテゴリー'
+
 # 予約投稿機能のためマネージャーの作成
 class DiaryQuerySet(models.QuerySet):
     def published(self):
@@ -30,3 +34,7 @@ class BaseModel(models.Model):
 
     def __str__(self):
         return self.title
+
+    class Meta:
+        verbose_name = '投稿'
+        verbose_name_plural = '投稿'
