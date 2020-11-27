@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block contents %}
+
+<ul class="card mb-3 container card--wrapper_list">
+    <li class="card-body">
+        <h2 class="card-title">{{ object.title }}</h2>
+        <h4>カテゴリー：{{ object.category }}</h3>
+        <p class="card-text">{{ object.description }}</p>
+        <p class="card-text"><small class="text-muted">作成日: {{ object.created_at|date:"Y年m月d日(D)" }}</small></p>
+        {% autoescape off %}
+            <p>{{ object.text }}</p>
+        {% endautoescape %}
+    </li>
+</ul>
+
+{% endblock contents %}
