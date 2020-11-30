@@ -8,7 +8,17 @@
 {% block contents %}
 
     <h1>まいけむ</h1>
-<div class="card--contents">
+    <div class="card--contents">
+        <h4>カテゴリー</h4>
+        {% for category in category_list %}
+            <a href='{% url 'category' category.name %}'>
+                <p style=''>
+                    {{ category.name }}
+                </p>
+            </a>
+        {% endfor %}
+    </div>
+
     <div class="card--wrapper">
         {% for publish in publish_list %}
         <ul class="card mb-3 container card--wrapper_list">
