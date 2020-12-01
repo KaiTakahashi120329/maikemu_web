@@ -5,8 +5,8 @@ import datetime
 
 def CategoryFunc(request, category):
     category = Category.objects.get(name=category)
-    blogCategory = BaseModel.objects.filter(category=category)
-    return render(request, 'category.html', { 'category': category, 'blogCategory': blogCategory})
+    publish_list = BaseModel.objects.published().filter(category=category)
+    return render(request, 'category.html', { 'category':category, 'publish_list':publish_list})
 
 def BlogFunc(request):
     publish_list = BaseModel.objects.published()
