@@ -1,7 +1,9 @@
 <ul class="card mb-3 container card--wrapper_list">
-{% for object in blogCategory %}
+{% for object in publish_list %}
     <li class="card-body">
-        <h2 class="card-title">{{ object.title }}</h2>
+        <a href='{% url 'detail' object.pk %}'>
+            <h2 class="card-title">{{ object.title }}</h2>
+        </a>
         <p class="card-text">{{ object.description }}</p>
         <h4>カテゴリー：{{ object.category }}</h3>
         <p class="card-text"><small class="text-muted">作成日: {{ object.created_at|date:"Y年m月d日(D)" }}</small></p>
