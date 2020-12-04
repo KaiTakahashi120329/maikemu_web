@@ -139,3 +139,12 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 # WYSIWYGの設定
 X_FRAME_OPTIONS = 'SAMEORIGIN'
+
+# メールを実際に送らず、コンソール画面へ表示する
+#EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+ 
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'gmailアカウント名'
+EMAIL_HOST_PASSWORD = 'gmailパスワード'
+EMAIL_USE_TLS = True
