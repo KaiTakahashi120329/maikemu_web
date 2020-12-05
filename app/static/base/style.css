@@ -1,0 +1,26 @@
+header {
+  background-color: #EFF0F2;
+  border-bottom: 1px solid #ECEDEF;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 15vh;
+}
+
+header .header__header-title--hoverNone:hover {
+  color: #000000;
+}
+
+.header__nav {
+  width: 50%;
+}
+
+header .header__nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header .header__nav-list__item {
+  margin: 0 3%;
+}
