@@ -4,19 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>まいけむSTC</title>
-    <link rel="stylesheet" href="../static/reset.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/base/style.css">
+    <link rel="stylesheet" href="../static/reset.css">
     {% block style.css %}
     {% endblock style.css %}
 </head>
 <body>
-    <header>
-
-    </header>
+  <header>
+    <div class="header__header-title">
+      <a href="{% url 'top' %}" class="header__header-title--hoverNone">
+        <h1>まいけむSTC</h1>
+      </a>
+    </div>
+    <nav class="header__nav">
+      <ul class="header__nav-list">
+        <li class="header__nav-list__item">
+          <a href="{% url 'top' %}">
+            TOPへ
+          </a>
+        </li>
+        <li class="header__nav-list__item">
+          <a href="{% url 'list' %}">
+            投稿一覧
+          </a>
+        </li>
+        <li class="header__nav-list__item">
+          <a href="{% url 'contact' %}">
+            お問い合わせ
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
     
     {% block contents %}
-        <h1>TOP</h1>
+    <h1>TOP</h1>
     {% endblock contents %}
 
     <footer>
